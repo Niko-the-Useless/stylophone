@@ -1,0 +1,10 @@
+CLASS 0 default 0.4mm 0.5mm 0.1mm 
+CLASS 1 GND_I<0.5A 0.8mm 0.5mm 0.5mm
+CLASS 2 GND_0.5A<I>1A 1.5mm 0.5mm 0.5mm
+CLASS 3 GND_1A<I>2A 2.5mm 0.5mm 0.5mm
+CLASS 4 GND_2A<I>4A 3.5mm 0.5mm 0.5mm
+CLASS 5 POWER_I<0.5A 0.7mm 0.5mm 0.5mm
+CLASS 6 POWER_0.5<I<1A 1mm 0.5mm 0.5mm
+CLASS 7 POWER_1A<I>2A 1.5mm 0.5mm 0.5mm
+CLASS 8 POWER_2A<I>3A 2.5mm 0.5mm 0.5mm
+CLASS 9 SIGNAL 0.4mm 0.5mm 0.5mm

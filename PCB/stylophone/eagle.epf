@@ -343,10 +343,11 @@ UsedLibrary="/home/Niko/eagle-6.6.0/lbr/xilinx-xc9.lbr"
 UsedLibrary="/home/Niko/eagle-6.6.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="/home/Niko/eagle-6.6.0/lbr/zetex.lbr"
 UsedLibrary="/home/Niko/eagle-6.6.0/lbr/zilog.lbr"
+UsedLibrary="/home/Niko/projects/stylophone/eagleLib/Przyrzady pomiarowe.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="0 0 471 516"
+Loc="7 31 955 547"
 State=2
 Number=0
 
