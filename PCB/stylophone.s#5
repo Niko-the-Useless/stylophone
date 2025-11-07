@@ -9418,7 +9418,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="R1" library="resistor" deviceset="R-TRIMM" device="5X"/>
 <part name="R8" library="resistor" deviceset="R-TRIMM" device="5X"/>
 <part name="SV2" library="con-lstb" deviceset="MA05-1" device=""/>
-<part name="R4" library="rcl" deviceset="R-EU_" device="0204/7"/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="0204/5"/>
 </parts>
 <sheets>
 <sheet>
