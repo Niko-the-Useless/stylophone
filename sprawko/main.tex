@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage [utf8]{inputenc}
+\usepackage {polski} 
+\usepackage{float}
+
+\title{Stylofon z efektem Vibrato}
+\author{Brzeziński Radosław 277950}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Wstęp}
+Projekt obejmuje zaprojektowanie, pomiary oraz wykonanie stylofonu z efektem vibrato zbudowanego na bazie dwóch układów NE555. Częstotliwość dźwięku generowanego przez układ określana jest poprzez użycie stylusa. Im wyższa wartość rezystora przez który układ jest w ten sposób zamknięty, tym wyższa częstotliwość dźwięku.\newline
+Pomysł na działanie układu zaczerpnięto z wcześniejszego zainteresowania projektowaniem syntezatora oraz efektów dźwiękowych.\newline
+Podstawowym źródłem wiedzy na temat budowy i działania układu wzięto z poprzednich wykładów oraz laboratoriów, głównie z zajęć "Narzędzia CAD w projektowaniu układów elektronicznych".
+
+\section{Schemat układu i sposób działania}
+\subsection{Działanie multiwibratora astabilnego}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/Inside-555-timer-sketched-2656785378.png}
+    \caption{Licznik 555}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/Multivibrator.png}
+    \caption{Multiwibrator astabilny}
+\end{figure}
+Działanie multiwibratora astabilnego składa się na dwie fazy.
+\subsubsection{Faza ładowania kondensatora}
+\begin{itemize}
+    \item Po włączeniu zasilania kondensator C zaczyna się ładować przez $R_1+R_2$
+    \item Napięcie na kondensatorze Vc rośnie wykładniczo
+    \item Gdy Vc osiągnie poziom 2/3 Vcc, komparator 2 (TRESHOLD) ustawia przerzutnik RS a wyjście przechodzi w stan niski
+    \item Tranzystor rozładowujący zostaje włączony i zaczyna rozładowywać kondensator przez $R_2$
+\end{itemize}
+\subsubsection{Faza rozładowania kondensatora}
+\begin{itemize}
+    \item Kondensator rozładowuje się przez $R_2$ do momentu, aż napięcie spadnie poniżej 1/3 Vcc.
+    \item Komparator 1 (TRIGGER) resetuje przerzutnik RS a wyjście przechodzi w stan wysoki
+    \item Tranzystor rozładowujący zostaje wyłączony i cykl rozpoczyna się od nowa
+\end{itemize}
+\subsection{Działanie stylofonu}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/schemat.png}
+    \caption{Schemat ideowy stylofonu}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/schematEagle.png}
+    \caption{Schemat stylofonu}
+\end{figure}
+Stylofon składa się z dwóch układów NE555 w trybie multiwibratora astabilnego. Rezystor R2 układu generatora dźwięku zastąpiony został zestawem rezystorów oraz stylusem pozwalającym na wybranie częstotliwości generowanego dźwięku. Wejście Control Voltage kontrolujące napięcie graniczne podłączone jest poprzez filtr dolnoprzepustowy do kolejnego licznika NE555 w układzie multiwibratora astabilnego dając efekt vibrato. Filtr wymagany jest do odfiltrowania wyższych harmonicznych z przebiegu prostokątnego generowanego przez układ. Wyjście generatora dźwięku podłączone jest to wzmacniacza operacyjnego w układzie voltage follower, co pozwala na użycie głośników z wyższą impedancją. \newline
+\section{Symulacja oraz pomiary}
+Analizie podano następujące parametry
+\begin{itemize}
+    \item Wyjście układu dźwięku oraz układu vibrato
+    \item Przebieg wyjścia licznika 555 Tone
+    \item Przebiegi ładowania i rozładowywania kondensatorów obu multiwibratorów
+    \item Natężenie prądu pobieranego przez układ
+    \item Wpływ potencjometru $R_{Volume}$
+\end{itemize}
+Analiza przeprowadzona jest dla napięcia Vcc = 5V, ponieważ układ przystosowany jest do zasilania przez port USB
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/output.png}
+    \caption{Przebiegi wyjść, dźwięku oraz vibrato}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/kondensatory.png}
+    \caption{Przebiegi ładowania i rozładowania kondensatorów}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/current.png}
+    \caption{Przebieg natężenia prądu źródła}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/schematPomiarowy.png}
+    \caption{Schemat pomiarowy układu}
+\end{figure}
+\section{Projekt płytki drukowanej}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/schematPCB.png}
+    \caption{Projekt płytki PCB}
+\end{figure}
+\end{document}
