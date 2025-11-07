@@ -10162,8 +10162,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="NB4" library="resistor" deviceset="R-EU_" device="M1206"/>
 <part name="SV2" library="con-lstb" deviceset="MA05-1" device=""/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="0204/5"/>
-<part name="R5" library="pot" deviceset="TRIM_EU-" device="CA6V"/>
-<part name="R1" library="pot" deviceset="TRIM_EU-" device="CA6V"/>
+<part name="R5" library="pot" deviceset="TRIM_EU-" device="CA9V"/>
+<part name="R1" library="pot" deviceset="TRIM_EU-" device="CA9V"/>
 </parts>
 <sheets>
 <sheet>
