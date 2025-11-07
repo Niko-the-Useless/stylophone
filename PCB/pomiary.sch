@@ -49,7 +49,7 @@
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
@@ -6202,6 +6202,11 @@ DIN A4, landscape with location and doc. field</description>
 <sheets>
 <sheet>
 <plain>
+<text x="-289.56" y="180.34" size="1.778" layer="95">Pomiar przebiegu ładowania kondensatora Tone
+pomiar przebiegu wyjścia Tone</text>
+<text x="-231.14" y="180.34" size="1.778" layer="95">Pomiar przebiegu ładowania kondensatora Vibrato
+pomiar wpływu potencjometru Vibrato na wyjście Vibrato oraz Tone</text>
+<text x="-157.48" y="180.34" size="1.778" layer="95">Pomiar wpływu potencjometru Volume na wyjście</text>
 </plain>
 <instances>
 <instance part="TONE" gate="G$1" x="-271.78" y="121.92" smashed="yes">
@@ -6271,6 +6276,49 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="FRAME1" gate="G$1" x="-330.2" y="53.34"/>
 </instances>
 <busses>
+<bus name="B$1">
+<segment>
+<wire x1="-274.32" y1="152.4" x2="-294.64" y2="152.4" width="0.762" layer="92"/>
+<wire x1="-294.64" y1="152.4" x2="-302.26" y2="144.78" width="0.762" layer="92"/>
+<wire x1="-302.26" y1="144.78" x2="-302.26" y2="129.54" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$2">
+<segment>
+<wire x1="-266.7" y1="152.4" x2="-266.7" y2="144.78" width="0.762" layer="92"/>
+<wire x1="-266.7" y1="144.78" x2="-259.08" y2="137.16" width="0.762" layer="92"/>
+<wire x1="-259.08" y1="137.16" x2="-259.08" y2="121.92" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$3">
+<segment>
+<wire x1="-243.84" y1="129.54" x2="-243.84" y2="147.32" width="0.762" layer="92"/>
+<wire x1="-243.84" y1="147.32" x2="-238.76" y2="152.4" width="0.762" layer="92"/>
+<wire x1="-238.76" y1="152.4" x2="-215.9" y2="152.4" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$4">
+<segment>
+<wire x1="-208.28" y1="152.4" x2="-208.28" y2="144.78" width="0.762" layer="92"/>
+<wire x1="-208.28" y1="144.78" x2="-195.58" y2="132.08" width="0.762" layer="92"/>
+<wire x1="-195.58" y1="132.08" x2="-195.58" y2="121.92" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$5">
+<segment>
+<wire x1="-154.94" y1="116.84" x2="-154.94" y2="119.38" width="0.762" layer="92"/>
+<wire x1="-154.94" y1="119.38" x2="-149.86" y2="124.46" width="0.762" layer="92"/>
+<wire x1="-149.86" y1="124.46" x2="-149.86" y2="132.08" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$6">
+<segment>
+<wire x1="-142.24" y1="132.08" x2="-142.24" y2="127" width="0.762" layer="92"/>
+<wire x1="-142.24" y1="127" x2="-132.08" y2="116.84" width="0.762" layer="92"/>
+<wire x1="-132.08" y1="116.84" x2="-124.46" y2="116.84" width="0.762" layer="92"/>
+<wire x1="-124.46" y1="116.84" x2="-121.92" y2="114.3" width="0.762" layer="92"/>
+</segment>
+</bus>
 </busses>
 <nets>
 <net name="VCC" class="0">
@@ -6318,24 +6366,7 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="SV2" gate="1" pin="3"/>
 <wire x1="-134.62" y1="114.3" x2="-121.92" y2="114.3" width="0.1524" layer="91"/>
 <junction x="-134.62" y="114.3"/>
-<pinref part="U$3" gate="G$1" pin="CH2"/>
-<wire x1="-142.24" y1="132.08" x2="-142.24" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="-142.24" y1="124.46" x2="-134.62" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="-134.62" y1="116.84" x2="-124.46" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="-124.46" y1="116.84" x2="-121.92" y2="114.3" width="0.1524" layer="91"/>
-<junction x="-121.92" y="114.3"/>
 <label x="-134.62" y="114.3" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="IC2" gate="A" pin="+IN"/>
-<wire x1="-154.94" y1="116.84" x2="-157.48" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="CH1"/>
-<wire x1="-149.86" y1="132.08" x2="-149.86" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="-149.86" y1="124.46" x2="-157.48" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="S"/>
-<junction x="-157.48" y="116.84"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -6406,13 +6437,7 @@ DIN A4, landscape with location and doc. field</description>
 <segment>
 <pinref part="TONE" gate="G$1" pin="OUT"/>
 <label x="-259.08" y="121.92" size="1.778" layer="95"/>
-<wire x1="-261.62" y1="121.92" x2="-259.08" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="-259.08" y1="121.92" x2="-251.46" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="-259.08" y1="121.92" x2="-259.08" y2="137.16" width="0.1524" layer="91"/>
-<junction x="-259.08" y="121.92"/>
-<wire x1="-259.08" y1="137.16" x2="-266.7" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="CH2"/>
-<wire x1="-266.7" y1="144.78" x2="-266.7" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="121.92" x2="-251.46" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="A"/>
@@ -6429,12 +6454,7 @@ DIN A4, landscape with location and doc. field</description>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="S"/>
-<wire x1="-195.58" y1="121.92" x2="-195.58" y2="127" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="CH2"/>
-<wire x1="-208.28" y1="152.4" x2="-208.28" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="-195.58" y1="127" x2="-208.28" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="-195.58" y1="121.92" x2="-182.88" y2="121.92" width="0.1524" layer="91"/>
-<junction x="-195.58" y="121.92"/>
 <label x="-193.04" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -6448,13 +6468,7 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-284.48" y1="129.54" x2="-302.26" y2="129.54" width="0.1524" layer="91"/>
 <junction x="-284.48" y="129.54"/>
-<junction x="-302.26" y="129.54"/>
 <label x="-302.26" y="137.16" size="1.778" layer="95"/>
-<pinref part="U$4" gate="G$1" pin="CH1"/>
-<wire x1="-274.32" y1="152.4" x2="-276.86" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="-276.86" y1="149.86" x2="-299.72" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="-299.72" y1="149.86" x2="-302.26" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="-302.26" y1="147.32" x2="-302.26" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NOTE" class="0">
@@ -6502,11 +6516,6 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-241.3" y1="129.54" x2="-243.84" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="-241.3" y1="139.7" x2="-241.3" y2="129.54" width="0.1524" layer="91"/>
 <junction x="-241.3" y="129.54"/>
-<pinref part="U$2" gate="G$1" pin="CH1"/>
-<wire x1="-215.9" y1="152.4" x2="-223.52" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="-223.52" y1="144.78" x2="-243.84" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="-243.84" y1="144.78" x2="-243.84" y2="129.54" width="0.1524" layer="91"/>
-<junction x="-243.84" y="129.54"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -6515,6 +6524,13 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-208.28" y1="121.92" x2="-203.2" y2="127" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="A"/>
 <wire x1="-203.2" y1="127" x2="-200.66" y2="127" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="S"/>
+<pinref part="IC2" gate="A" pin="+IN"/>
+<wire x1="-154.94" y1="116.84" x2="-157.48" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
