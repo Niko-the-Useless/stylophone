@@ -10,9 +10,9 @@
 \maketitle
 \tableofcontents
 \section{Wstęp}
-Projekt obejmuje zaprojektowanie, pomiary oraz wykonanie stylofonu z efektem vibrato zbudowanego na bazie dwóch układów NE555. Częstotliwość dźwięku generowanego przez układ określana jest poprzez użycie stylusa. Im wyższa wartość rezystora przez który układ jest w ten sposób zamknięty, tym wyższa częstotliwość dźwięku.\newline
-Pomysł na działanie układu zaczerpnięto z wcześniejszego zainteresowania projektowaniem syntezatora oraz efektów dźwiękowych.\newline
-Podstawowym źródłem wiedzy na temat budowy i działania układu wzięto z poprzednich wykładów oraz laboratoriów, głównie z zajęć "Narzędzia CAD w projektowaniu układów elektronicznych".
+Projekt obejmuje zaprojektowanie, pomiary oraz wykonanie stylofonu z efektem vibrato, zbudowanego na bazie dwóch układów NE555. Częstotliwość dźwięku generowanego przez układ określana jest za pomocą stylusa. Im większa wartość rezystora, przez który układ zostaje w ten sposób zamknięty, tym wyższa częstotliwość dźwięku.\newline
+Pomysł na działanie układu zaczerpnięto z wcześniejszego zainteresowania projektowaniem syntezatorów oraz efektów dźwiękowych. \newline
+Podstawowym źródłem wiedzy na temat budowy i działania układu były wcześniejsze wykłady oraz laboratoria, głównie zajęcia „Narzędzia CAD w projektowaniu układów elektronicznych”.
 
 \section{Schemat układu i sposób działania}
 \subsection{Działanie multiwibratora astabilnego}
@@ -51,7 +51,7 @@ Działanie multiwibratora astabilnego składa się na dwie fazy.
     \includegraphics[width=1\linewidth]{images/schematEagle.png}
     \caption{Schemat stylofonu}
 \end{figure}
-Stylofon składa się z dwóch układów NE555 w trybie multiwibratora astabilnego. Rezystor R2 układu generatora dźwięku zastąpiony został zestawem rezystorów oraz stylusem pozwalającym na wybranie częstotliwości generowanego dźwięku. Wejście Control Voltage kontrolujące napięcie graniczne podłączone jest poprzez filtr dolnoprzepustowy do kolejnego licznika NE555 w układzie multiwibratora astabilnego dając efekt vibrato. Filtr wymagany jest do odfiltrowania wyższych harmonicznych z przebiegu prostokątnego generowanego przez układ. Wyjście generatora dźwięku podłączone jest to wzmacniacza operacyjnego w układzie voltage follower, co pozwala na użycie głośników z wyższą impedancją. \newline
+Stylofon składa się z dwóch układów NE555 pracujących w trybie multiwibratora astabilnego. Rezystor R2 układu generatora dźwięku został zastąpiony zestawem rezystorów oraz stylusem, który umożliwia wybór częstotliwości generowanego dźwięku. Wejście Control Voltage, kontrolujące napięcie graniczne, podłączone jest przez filtr dolnoprzepustowy do kolejnego układu NE555, również pracującego jako multiwibrator astabilny, co daje efekt vibrato. Filtr jest niezbędny do odfiltrowania wyższych harmonicznych z przebiegu prostokątnego generowanego przez układ. Wyjście generatora dźwięku podłączone jest do wzmacniacza operacyjnego w układzie voltage follower, co pozwala na podłączenie głośników o wyższej impedancji.\newline
 \section{Symulacja oraz pomiary}
 Analizie podano następujące parametry
 \begin{itemize}
